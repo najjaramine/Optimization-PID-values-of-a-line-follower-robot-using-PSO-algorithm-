@@ -8,9 +8,9 @@ File file;
 const uint8_t SensorCount = 8;
 uint16_t sensorValues[SensorCount];
 //PID control system variables
-float Kp = /*0.12*/0.07;
-float Ki = /*0*/0.0008; 
-float Kd = /*0.06*/0.6; 
+float Kp = 0.07;
+float Ki = 0.0008; 
+float Kd = 0.6; 
 int P;
 int I;
 int D;

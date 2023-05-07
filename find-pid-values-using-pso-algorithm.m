@@ -3,25 +3,18 @@ clear all
 clc
 
 
-%this code for the estimation of the transfer function of my system
-% % Load input-output data
-% load('file adress'); % replace with the name of your data file
-% 
-% % Create a time-series data object
-% Ts = 0.01; % sampling time
-% data = iddata(y,u,Ts); % y is the output data, u is the input data
-% 
-% % Specify a model structure
-% sys = tfest(data, 3, 1); % 3 poles and 1 zero transfer function
+this code for the estimation of the transfer function of my system
+% Load input-output data from file
+load('file adress'); % replace with the name of your data file
+
+% Create a time-series data object
+Ts = 0.01; % sampling time
+data = iddata(y,u,Ts); % y is the output data, u is the input data
+
+% Specify a model structure
+sys = tfest(data, 3, 1); % 3 poles and 1 zero transfer function
 
 
-%generate the transfer function 
-x=[1];
-y=[1 2 3];
-g=tf(x,y);
-gf=feedback(g,1);
-step(gf);
-hold on;
 
 
 %pso constant parameters
